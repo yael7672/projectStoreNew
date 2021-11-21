@@ -1,9 +1,36 @@
 import React from "react"
 import '../Components/ConactUs.css'
+import { connect } from 'react-redux';
+import { actions } from '../Store/actions';
+
+// import axios from 'axios';
+
+
+function mapStateToProps(state) {
+    return {
+        user: state.UserReducer.user
+    }
+}
+const mapDispatchToProps = (dispatch) => ({
+    setName: (name) => dispatch(actions.setName(name)),
+    setAge: (age) => dispatch(actions.setAge(age)),
+    setCity: (city) => dispatch(actions.setCity(city)),
+    setMail: (mail) => dispatch(actions.setMail(mail)),
+    setPhone: (phone) => dispatch(actions.setPhone(phone)),
+})
+
+
+// export default connect(mapStateToProps, mapDispatchToProps)(function ContactUs(props) {
+//     const { user, setName,setAge ,setCity,setMail,setPhone } = props;
+//     const [data, setData] = useState({})
+
+
+////
 export default function ContactUs(props) {
 
     return (
 <>
+
         {/* < h1 > צור קשר</h1 > */}
         <div class="background">
   <div class="container">
@@ -27,6 +54,7 @@ export default function ContactUs(props) {
             <span>US</span>
           </div>
           <div class="app-contact">CONTACT INFO : +62 81 314 928 595</div>
+         
         </div>
         <div class="screen-body-item">
           <div class="app-form">
@@ -69,3 +97,4 @@ export default function ContactUs(props) {
 </>
     )
 }
+// )

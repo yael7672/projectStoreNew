@@ -1,12 +1,23 @@
 import React, { Component } from 'react'
 import logo from './logo.svg';
 import './App.css';
+import store from './Store/Store';
 import Login from './Components/login'
 import Home from './Components/Home'
 import Menu from './Components/menu';
 import Product from './Components/Product';
 import ContactUs from './Components/ContactUs';
 import { BrowserRouter } from 'react-router-dom';
+import { Provider } from "react-redux";
+import { createStore } from "redux";
+import ReactDOM from 'react-dom';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link,
+    useParams
+} from "react-router-dom";
 function App() {
   return (
     <div className="App">
@@ -15,6 +26,20 @@ function App() {
       <BrowserRouter>
         <Menu></Menu>
       </BrowserRouter>
+      {/* <Switch>
+          <Provider store={store}>
+          <Route exact path="/">
+           <FirstLevel></FirstLevel> 
+          </Route>
+          <Route path="/secondLevel">
+            <SecondLevel></SecondLevel>
+          </Route>
+          <Route path="/thirdLevel">
+            <ThirdLevel></ThirdLevel>
+          </Route>
+
+        </Provider>
+        </Switch> */}
     </div>
   );
 }
