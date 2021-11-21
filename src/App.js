@@ -4,6 +4,8 @@ import './App.css';
 import Login from './Components/login'
 import Home from './Components/Home'
 import Menu from './Components/menu';
+import Product from './Components/Product';
+import ContactUs from './Components/ContactUs';
 import { BrowserRouter } from 'react-router-dom';
 function App() {
   return (

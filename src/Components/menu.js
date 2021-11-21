@@ -11,6 +11,7 @@ import Login from "./login";
 import ShoppingCart from "./ShoppingCart";
 import Register from "./Register";
 import './menu.css'
+import Product from "./Product";
 
 export default function Menu(props) {
 
@@ -42,6 +43,9 @@ export default function Menu(props) {
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                             <li class="nav-item">
                                 <Link class="nav-link" to={'/'}>בית</Link >
+                            </li>
+                            <li class="nav-item">
+                                <Link class="nav-link" to={'/Product'}>המוצרים שלנו</Link >
                             </li>
                             <li class="nav-item">
                                 <Link class="nav-link" to={'/aboutUs'}>לופו- מי אנחנו</Link>
@@ -126,7 +130,7 @@ export default function Menu(props) {
                 <Route exact path='/' component={Home} />
                 < Route path='/contactUs' component={ContactUs} />
                 < Route path='/aboutUs' component={AboutUs} />
-
+                < Route path='/Product' component={Product} />
             </Switch>
             {/* footer */}
 
