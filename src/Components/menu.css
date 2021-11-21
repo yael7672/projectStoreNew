@@ -1,0 +1,10 @@
+.bg-light {
+    background-color:rgb(191, 226, 240)!important;
+}
+/* @media (min-width: 992px)
+.text-lg-start {
+    text-align: right !important
+} */
+.nav-link{
+    direction:rtl;
+}
